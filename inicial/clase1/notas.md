@@ -47,4 +47,22 @@ en windows:
     localhost/juanito
     
     
+## en PHP tenemos delimitadores
+
+>un delimitador establece límites
+>hay un delimitador de inicio
+
+    <?php
+
+>y hay un delimitador de fin
+
+    ?>
     
+> TODO el codigo PHP debe estar dentro de los delimitadores
+
+
+    
+    
+TAREA:
+
+    leer formularios en HTML
