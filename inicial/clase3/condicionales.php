@@ -18,6 +18,29 @@
     }
 ?>
 
+    <hr>
+
+<?php
+    $numero = $_POST['numero'];
+    if( $numero < 100 ){
+        $img = 'ok';
+    }
+    else{
+        $img = 'error';
+    }
+?>
+    <img src="imagenes/<?= $img ?>.png">
+
+    <hr>
+<?php
+    $numero = $_POST['numero'];
+    $img = 'error';
+    if( $numero < 100 ){
+        $img = 'ok';
+    }
+?>
+    <img src="imagenes/<?= $img ?>.png">
+
 
 </body>
 </html>
