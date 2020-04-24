@@ -6,3 +6,8 @@
 > bucles
 
 
+Tarea:
+
+    investigar bootstrap
+
+    ver archivo tailanda.php
