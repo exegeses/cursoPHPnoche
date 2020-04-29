@@ -20,13 +20,13 @@
 <?php
     while ( $n < $cantidad ){
 ?>
-            <div class="card col-4 p-1">
+            <article class="card col-4 p-1">
                 <img src="imagenesGroupon/<?= $imagenes[$n]; ?>.jpg" class="img-card-top">
                 <div class="card-body">
                     <h2><?= $descripciones[$n]; ?></h2>
                     <span class="text-success lead">$<?= $precios[$n]; ?></span>
                 </div>
-            </div>
+            </article>
 <?php
         $n++;
     }
