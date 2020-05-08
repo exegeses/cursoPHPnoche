@@ -1,6 +1,9 @@
 <?php
 
     require 'config/config.php';
+    require 'funciones/conexion.php';
+    require 'funciones/marcas.php';
+    $marcas = listarMarcas();
 	include 'includes/header.html';
 	include 'includes/nav.php';  
 ?>
@@ -29,6 +32,13 @@
                     <label for="idMarca">Marca</label>
                     <select class="form-control" name="idMarca" id="idMarca" required>
                         <option value="">Seleccione una marca</option>
+<?php
+                while ( $marca = mysqli_fetch_assoc( $marcas ) ) {
+?>                          
+                        <option value="<?= $marca['idMarca'] ?>"><?= $marca['mkNombre'] ?></option>
+<?php
+                }
+?>                        
                     </select>
                 </div>
 
