@@ -9,4 +9,11 @@ TAREA
 
  adminCategorias
  adminUsuarios
- adminProuctos
+ 
+ 
+ listar categorias en formAgregarProducto
+ agregarCategoria
+ agregarUsuario
+ 
+ 
+ 
