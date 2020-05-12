@@ -3,7 +3,9 @@
     require 'config/config.php';
     require 'funciones/conexion.php';
     require 'funciones/marcas.php';
+    require 'funciones/categorias.php';
     $marcas = listarMarcas();
+    $categorias = listarCategorias();
 	include 'includes/header.html';
 	include 'includes/nav.php';  
 ?>
@@ -46,6 +48,13 @@
                     <label for="idCategoria">Categoría</label>
                     <select class="form-control" name="idCategoria" id="idCategoria" required>
                         <option value="">Seleccione una categoría</option>
+<?php
+                while ( $categoria = mysqli_fetch_assoc($categorias) ) {
+?>
+                        <option value="<?= $categoria['idCategoria'] ?>"><?= $categoria['catNombre'] ?></option>
+<?php
+                }
+?>
                     </select>
                 </div>
 

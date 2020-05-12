@@ -7,8 +7,6 @@
 
 TAREA
 
- adminCategorias
- adminUsuarios
  
  
  listar categorias en formAgregarProducto
