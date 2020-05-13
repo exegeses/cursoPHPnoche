@@ -46,7 +46,7 @@
         $idMarca = $_POST['idMarca'];
         $idCategoria = $_POST['idCategoria'];
         $prdPresentacion = $_POST['prdPresentacion'];
-        $prdStock = $_POST['prdPStock'];
+        $prdStock = $_POST['prdStock'];
 
         $prdImagen = subirArchivo();
 
@@ -63,6 +63,7 @@
                         ".$prdStock.",
                         '".$prdImagen."'
                      )";
+
         $resultado = mysqli_query($link, $sql)
                             or die( mysqli_error($link) );
         return $resultado;

@@ -9,9 +9,10 @@ TAREA
 
  
  
- listar categorias en formAgregarProducto
- agregarCategoria
- agregarUsuario
+los 4 admins 
+y 
+los 4 agregar
+
  
  
  
