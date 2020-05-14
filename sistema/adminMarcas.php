@@ -32,7 +32,7 @@
                     <td><?= $marca['idMarca']; ?></td>
                     <td><?= $marca['mkNombre']; ?></td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formModificarMarca.php?idMarca=<?= $marca['idMarca'] ?>" class="btn btn-outline-secondary">
                             Modificar
                         </a>
                     </td>

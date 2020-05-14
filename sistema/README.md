@@ -9,10 +9,5 @@ TAREA
 
  
  
-los 4 admins 
-y 
-los 4 agregar
-
- 
  
  
