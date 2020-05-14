@@ -22,9 +22,10 @@
 
         $link = conectar();
         $sql = "INSERT INTO usuarios 
-                    ( usuNombre, usuApellido, usuEmail, usuPass, usuEstado )
+                   
                     VALUE 
                     ( 
+                        DEFAULT ,
                         '".$usuNombre."', 
                         '".$usuApellido."', 
                         '".$usuEmail."', 
