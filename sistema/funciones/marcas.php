@@ -45,6 +45,7 @@
         $sql = "UPDATE marcas 
                     SET mkNombre = '".$mkNombre."' 
                     WHERE idMarca = ".$idMarca;
+
         $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
         return $resultado;
