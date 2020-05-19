@@ -2,24 +2,26 @@
 
     require 'config/config.php';
     require 'funciones/conexion.php';
-    require 'funciones/marcas.php';
-    $marcas = listarMarcas();
+    require 'funciones/categorias.php';
+    $categorias = listarCategorias();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
 
     <main class="container">
-        <h1>Panel de administración de marcas</h1>
+        <h1>Panel de administración de categorías</h1>
 
-        <a href="admin.php" class="btn btn-outline-secondary m-3">Volver a principal</a>
+        <a href="admin.php" class="btn btn-outline-secondary m-2">
+            Volver a principal
+        </a>
 
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-hover table-bordered table-stripped">
             <thead class="thead-dark">
                 <tr>
-                    <th>id</th>
-                    <th>Marca</th>
+                    <th>Id</th>
+                    <th>Categoría</th>
                     <th colspan="2">
-                        <a href="formAgregarMarca.php" class="btn btn-dark">
+                        <a href="" class="btn btn-dark">
                             Agregar
                         </a>
                     </th>
@@ -27,13 +29,13 @@
             </thead>
             <tbody>
 <?php
-        while( $marca = mysqli_fetch_assoc($marcas) ){
+            while ( $categoria = mysqli_fetch_assoc( $categorias ) ){
 ?>
                 <tr>
-                    <td><?= $marca['idMarca']; ?></td>
-                    <td><?= $marca['mkNombre']; ?></td>
+                    <td><?php echo $categoria['idCategoria']; ?></td>
+                    <td><?php echo $categoria['catNombre']; ?></td>
                     <td>
-                        <a href="formModificarMarca.php?idMarca=<?= $marca['idMarca'] ?>" class="btn btn-outline-secondary">
+                        <a href="" class="btn btn-outline-secondary">
                             Modificar
                         </a>
                     </td>
@@ -44,12 +46,14 @@
                     </td>
                 </tr>
 <?php
-    }
+            }
 ?>
             </tbody>
         </table>
 
-        <a href="admin.php" class="btn btn-outline-secondary m-3">Volver a principal</a>
+        <a href="admin.php" class="btn btn-outline-secondary m-2">
+            Volver a principal
+        </a>
 
     </main>
 
