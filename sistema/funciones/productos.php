@@ -87,8 +87,9 @@
                      AND 
                         p.idProducto = ".$idProducto;
         $resultado = mysqli_query($link, $sql)
-                        or die( mysqli_error($link) );
-        return $resultado;
+                            or die( mysqli_error($link) );
+        $producto = mysqli_fetch_assoc($resultado);
+        return $producto;
 
     }
 
