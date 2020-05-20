@@ -22,7 +22,11 @@
 
     function subirArchivo()
     {
-        $prdImagen = 'noDispopnible.jpg'; // valor si no enviaron archivo
+        $prdImagen = 'noDisponible.jpg'; // valor si no enviaron archivo en ALTA
+
+        if( isset($_POST['originalIMG']) ){ // si no enviaron archivo en MODICACION
+            $prdImagen = $_POST['originalIMG'];
+        }
 
         // si está todo ok (si enviaron archivo)
         if( $_FILES['prdImagen']['error'] == 0 ){
@@ -90,6 +94,20 @@
                             or die( mysqli_error($link) );
         $producto = mysqli_fetch_assoc($resultado);
         return $producto;
+
+    }
+
+    function modificarProducto()
+    {
+        $idProducto = $_POST['idProducto'];
+        $prdNombre = $_POST['prdNombre'];
+        $prdPrecio = $_POST['prdPrecio'];
+        $idMarca = $_POST['idMarca'];
+        $idCategoria = $_POST['idCategoria'];
+        $prdPresentacion = $_POST['prdPresentacion'];
+        $prdStock = $_POST['prdStock'];
+        $prdImagen = subirArchivo();
+
 
     }
 
