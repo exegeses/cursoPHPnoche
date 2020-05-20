@@ -24,8 +24,8 @@
     {
         $prdImagen = 'noDisponible.jpg'; // valor si no enviaron archivo en ALTA
 
-        if( isset($_POST['originalIMG']) ){ // si no enviaron archivo en MODICACION
-            $prdImagen = $_POST['originalIMG'];
+        if( isset($_POST['originalImg']) ){ // si no enviaron archivo en MODICACION
+            $prdImagen = $_POST['originalImg'];
         }
 
         // si está todo ok (si enviaron archivo)

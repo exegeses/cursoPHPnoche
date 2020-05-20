@@ -7,11 +7,14 @@
 
 TAREA
 
-    Form Modificar Producto
     
+   hacer 
+        modificarUsuario 
+        y
+        modificarCategoria 
     
-    si se mueren de ganas todos los modificar
-    (Gracias facundo!!!)
  
+  si se mueren de ganas, 
+      intentar eliminar Producto
  
  

@@ -19,6 +19,9 @@
 ?>
     <div class="alert alert-<?= $class ?>">
         <?= $mensaje ?>
+        <a href="adminMarcas.php" class="btn btn-oultine-secondary">
+            volver a panel
+        </a>
     </div>
 
     </main>
