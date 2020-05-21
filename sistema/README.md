@@ -7,14 +7,5 @@
 
 TAREA
 
-    
-   hacer 
-        modificarUsuario 
-        y
-        modificarCategoria 
-    
- 
-  si se mueren de ganas, 
-      intentar eliminar Producto
  
  
