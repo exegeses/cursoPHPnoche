@@ -10,7 +10,7 @@
     <main class="container">
         <h1>Confirmación de baja de un producto</h1>
 
-        <article class="card col-6 border-danger text-danger">
+        <article class="card col-6 border-danger text-danger mx-auto">
             <div class="row">
                 <div class="col">
                     <img src="productos/noDisponible.jpg" class="img-thumbnail">
@@ -35,6 +35,24 @@
                 </div>
             </div>
         </article>
+
+        <script>
+            Swal.fire({
+                title: '¿Desea eliminar el producto seleccionado?',
+                text: "¡Esta acción no se puede deshacer!",
+                type: 'warning',
+                showCancelButton: true,
+                cancelButtonColor: '#a5a4a4',
+                cancelButtonText: 'No lo quiero eliminar',
+                confirmButtonColor: '#d00',
+                confirmButtonText: 'Si, lo quiero eliminar'
+            }).then((result) => {
+                if ( !result.value) {
+                    //redirección a admin
+                    window.location = 'adminProductos.php'
+                }
+            })
+        </script>
 
     </main>
 
