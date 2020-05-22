@@ -7,5 +7,6 @@
 
 TAREA
 
- 
+    hacer todos los eliminar
+    
  
