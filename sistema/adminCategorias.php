@@ -1,6 +1,8 @@
 <?php
 
     require 'config/config.php';
+    require 'funciones/autenticar.php';
+            autenticar();
     require 'funciones/conexion.php';
     require 'funciones/categorias.php';
     $categorias = listarCategorias();

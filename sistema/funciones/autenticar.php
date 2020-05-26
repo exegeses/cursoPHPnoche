@@ -20,7 +20,7 @@
         }
         else{ // se logueó bien
             ## rutina de autenticación
-
+            $_SESSION['login'] = 1;
             //redireción a admin
             header('location: admin.php');
         }
@@ -29,4 +29,12 @@
     function logout()
     {
 
+    }
+
+    function autenticar()
+    {
+        //si no está logueado
+        if( !isset($_SESSION['login']) ){
+            header('location: formLogin.php?error=2');
+        }
     }

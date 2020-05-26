@@ -23,11 +23,18 @@
 
 <?php
         if( isset( $_GET['error'] ) ){
+            $error = $_GET['error'];
+            $titulo = 'Permiso denegado';
+            $mensaje = 'Debe loguearse para ingresar.';
+            if($error==1){
+                $titulo = 'Error el ingreso';
+                $mensaje = 'Nombre de usuario y/o clave incorrectos.';
+            }
 ?>
         <script>
             Swal.fire(
-                'Error el ingreso',
-                'Nombre de usuario y/o clave incorrectos.',
+                '<?= $titulo ?>',
+                '<?= $mensaje ?>',
                 'error'
             )
         </script>
